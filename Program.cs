@@ -55,34 +55,6 @@ namespace LINQ_Homework
 
 
 
-            /*  Գնահատականների միջին
-                List (Name, Grade)։
-                Հաշվել միջին գնահատականը։
-             */
-            List<Student> students = new List<Student>
-            {
-                new Student("Jack",98),
-                new Student("Aren",98),
-                new Student("Lucy",76),
-                new Student("Anna",89),
-                new Student("Alena",98),
-                new Student("Eva", 67.5),
-                new Student("Lucy",76),
-            };
-
-            double avgGrade = students.Average(i => i.Grade);
-            Console.WriteLine(avgGrade);
-            /* (Բոնուս) Գրիր ծրագիր, որը GroupBy-ի միջոցով ուսանողներին խմբավորում է ըստ գնահատականի և տպում․
-               Grade 90: 2 students
-               Grade 75: 1 student
-            */
-            var groupStudents = students.GroupBy(i => i.Grade);
-            foreach (var student in groupStudents)
-            {
-                Console.WriteLine($"Grade {student.Key}: {student.Count()} students");
-            }
-
-
 
             /*    Գրիր ծրագիր, որը List-ից գտնում է․
                   Ամենամեծ թիվը (Max)
@@ -97,6 +69,8 @@ namespace LINQ_Homework
             Console.WriteLine("Average: {0}", listNumbers.Average(i => i));
 
 
+
+            
             // Գրիր ծրագիր, որը List-ից գտնում է բոլոր բառերը, որոնց երկարությունը > 5։
             List<string> words = new List<string>() { "Aren", "Lia", "Jhon", "Kira", "Anahit" };
             var newWords = words.Where(i => i.Length > 5);
